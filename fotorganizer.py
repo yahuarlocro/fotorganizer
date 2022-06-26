@@ -29,10 +29,13 @@ for i in images_list:
         py_date = datetime.strptime(img_date, '%Y:%m:%d %H:%M:%S')
         year = str(py_date.year)
         month = str(py_date.month)
+        
+        if py_date.month < 10:
+            month = f"0{str(py_date.month)}"
 
         foto_dir = f"{fotos_dir}/{i}"
-        year_dir = f"{output_dir}/{str(year)}"
-        month_dir = f"{output_dir}/{str(year)}/{str(month)}"
+        year_dir = f"{output_dir}/{year}"
+        month_dir = f"{output_dir}/{year}/{month}"
 
         if not os.path.isdir(year_dir):
             os.mkdir(year_dir)
@@ -51,9 +54,14 @@ for i in images_list:
         year = str(movie_date.year)
         month = str(movie_date.month)
 
+        if movie_date.month < 10:
+            month = f"0{str(movie_date.month)}"
+
         foto_dir = f"{fotos_dir}/{i}"
-        year_dir = f"{output_dir}/{str(year)}"
-        month_dir = f"{output_dir}/{str(year)}/{str(month)}"
+        year_dir = f"{output_dir}/{year}"
+        month_dir = f"{output_dir}/{year}/{month}"
+
+        print(f"This image does not have EXIF (metadata) {i}")
 
         if not os.path.isdir(year_dir):
             os.mkdir(year_dir)
