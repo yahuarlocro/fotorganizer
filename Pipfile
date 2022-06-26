@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pillow = "==9.1.1"
+python-dotenv = "==0.20.0"
 
 [dev-packages]
 pillow = "*"
