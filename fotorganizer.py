@@ -7,8 +7,11 @@ import time
 
 # get environment variables
 config = dotenv_values(".env") 
+# directory where fotos are stored
 fotos_dir = config['FOTOS_DIRECTORY']
+# directory where this script is stored
 script_dir = config['HOME_DIRECTORY']
+# output directory
 output_dir = config['OUTPUT_DIRECTORY']
 
 #change to script home directory
