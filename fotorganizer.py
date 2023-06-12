@@ -15,7 +15,6 @@ output_dir = config['OUTPUT_DIRECTORY']
 os.chdir(script_dir)
 
 
-# imagename = "/home/nicolas/Desktop/pixel3-fotos/fotos/PXL_20220422_134508310.jpg"
 images_list = os.listdir(fotos_dir)
 
 for i in images_list:
